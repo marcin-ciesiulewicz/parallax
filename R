@@ -1,0 +1,3 @@
+#parallax
+
+Projekt HTML/jQuery z efektami parallax
