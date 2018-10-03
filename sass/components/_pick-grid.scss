@@ -1,0 +1,40 @@
+.clothes-pics {
+    figure {
+        position: relative;
+        opacity: 0;
+        transform: translateX(2rem);
+        transition: all .3s;
+        overflow: hidden;
+
+        img {
+            display: block;
+            transform: scale(1);            
+            transition: all .4s ease-in-out;
+        }
+
+        &.is-showing {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        figcaption {
+            position: absolute;
+            bottom: 1.5rem;
+            left: -100%;
+            background: $color-black;
+            color: $color-white;
+            font-size: 1.4rem;
+            transition: all .4s ease-in-out;
+        }
+
+        &:hover figcaption {
+            left: 0%;
+        }
+
+        &:hover img {
+            -moz-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+    }
+}

@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/*
+0-576px :       sm
+576-768px :     md
+768-992px :     lg
+992-1200 :      xl
+[1200-+] :   Podstawowe style
+
+
+$breakepoint opcje:
+-sm
+-md
+-gl
+-xl
+
+1em = 16px : najlepsze do media-query s─ů em'y , 16px to podstawowa warto┼Ť─ç czcionki przegl─ůdarki
+*/
+/* line 1, ../sass/base/_base.scss */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* line 9, ../sass/base/_base.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 13, ../sass/base/_base.scss */
+body {
+  box-sizing: border-box;
+}
+
+/* line 17, ../sass/base/_base.scss */
+strong {
+  font-weight: 900;
+}
+
+/* line 21, ../sass/base/_base.scss */
+figure {
+  margin: auto;
+}
+
+/* line 24, ../sass/base/_base.scss */
+.content {
+  position: relative;
+  background: white;
+  margin-bottom: 400px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* line 31, ../sass/base/_base.scss */
+article {
+  padding: 100px 0;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 37, ../sass/base/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 1, ../sass/base/_typography.scss */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+}
+
+/* line 8, ../sass/base/_typography.scss */
+h1 {
+  color: #ccc;
+  weight: 300;
+  font-size: 5rem;
+}
+
+/* line 14, ../sass/base/_typography.scss */
+p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* line 2, ../sass/components/_pick-grid.scss */
+.clothes-pics figure {
+  position: relative;
+  opacity: 0;
+  transform: translateX(2rem);
+  transition: all .3s;
+  overflow: hidden;
+}
+/* line 9, ../sass/components/_pick-grid.scss */
+.clothes-pics figure img {
+  display: block;
+  transform: scale(1);
+  transition: all .4s ease-in-out;
+}
+/* line 15, ../sass/components/_pick-grid.scss */
+.clothes-pics figure.is-showing {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* line 20, ../sass/components/_pick-grid.scss */
+.clothes-pics figure figcaption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: -100%;
+  background: #000;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: all .4s ease-in-out;
+}
+/* line 30, ../sass/components/_pick-grid.scss */
+.clothes-pics figure:hover figcaption {
+  left: 0%;
+}
+/* line 34, ../sass/components/_pick-grid.scss */
+.clothes-pics figure:hover img {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* line 1, ../sass/components/_large-window.scss */
+.large-window {
+  height: 64rem;
+  width: 64rem;
+  background: url(../img/model2.jpg) repeat-y;
+  background-position: center 0px;
+  background-attachment: fixed;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 12, ../sass/components/_large-window.scss */
+.window-tint {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 27, ../sass/components/_large-window.scss */
+.promo-text {
+  font-size: 1.6rem;
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 1.2;
+}
+/* line 33, ../sass/components/_large-window.scss */
+.promo-text strong {
+  display: block;
+  font-size: 3rem;
+}
+/* line 37, ../sass/components/_large-window.scss */
+.promo-text strong span {
+  font-weight: 300;
+  font-size: 2rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 46, ../sass/components/_large-window.scss */
+.promo-text .window-cta:link, .promo-text .window-cta:visited {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 1rem 2rem;
+  transition: all .3s ease-in;
+  font-weight: 400;
+}
+/* line 57, ../sass/components/_large-window.scss */
+.promo-text .window-cta:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* line 1, ../sass/components/_posts.scss */
+.blog-posts {
+  text-align: center;
+  height: 460px;
+}
+/* line 5, ../sass/components/_posts.scss */
+.blog-posts .post {
+  padding: 20px 20px 0;
+  border: 1px solid #eee;
+  background-color: white;
+  position: relative;
+}
+/* line 11, ../sass/components/_posts.scss */
+.blog-posts .post h4 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+/* line 16, ../sass/components/_posts.scss */
+.blog-posts .post-1 {
+  transform: translate(120px, 20px);
+}
+/* line 20, ../sass/components/_posts.scss */
+.blog-posts .post-2 {
+  z-index: 10;
+}
+/* line 24, ../sass/components/_posts.scss */
+.blog-posts .post-3 {
+  transform: translate(-120px, 20px);
+}
+
+/* line 1, ../sass/layout/_footer.scss */
+footer {
+  margin-top: 15rem;
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* line 11, ../sass/layout/_footer.scss */
+footer a:link,
+footer a:visited {
+  color: #fff;
+}
+/* line 16, ../sass/layout/_footer.scss */
+footer strong {
+  font-size: 1.9rem;
+}
+
+/* line 1, ../sass/layout/_header-home.scss */
+.bird-box {
+  position: relative;
+  height: 60rem;
+  background: url(../img/bird-bg.jpg);
+  background-size: auto 60rem;
+  background-position: top center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* line 11, ../sass/layout/_header-home.scss */
+.logo {
+  height: 10rem;
+  width: 100%;
+  background: url(../img/black-bird-logo.svg) no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -5rem;
+}
+
+/* line 21, ../sass/layout/_header-home.scss */
+.fore-bird {
+  height: 73.3rem;
+  width: 96rem;
+  background: url(../img/fore-bird.png) no-repeat right bottom;
+  position: absolute;
+  top: 38rem;
+  left: 50%;
+  margin-left: -48rem;
+}
+
+/* line 31, ../sass/layout/_header-home.scss */
+.back-bird {
+  width: 96rem;
+  height: 30rem;
+  background: url(../img/back-bird.png) no-repeat left bottom;
+  position: absolute;
+  left: 50%;
+  margin-left: -48rem;
+}

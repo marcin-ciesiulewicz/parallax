@@ -1,0 +1,38 @@
+.bird-box {
+    position: relative;
+    height: 60rem;
+    background: url(../img/bird-bg.jpg);
+    background-size: auto 60rem;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.logo {
+    height: 10rem;
+    width: 100%;
+    background: url(../img/black-bird-logo.svg) no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -5rem;
+}
+
+.fore-bird {
+    height: 73.3rem;
+    width: 96rem;
+    background: url(../img/fore-bird.png) no-repeat right bottom;
+    position: absolute;
+    top: 38rem;
+    left: 50%;
+    margin-left: -48rem;
+}
+
+.back-bird {
+    width: 96rem;
+    height: 30rem;
+    background: url(../img/back-bird.png) no-repeat left bottom;
+    position: absolute;
+    left: 50%;
+    margin-left: -48rem;
+}

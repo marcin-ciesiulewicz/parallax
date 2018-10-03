@@ -1,0 +1,47 @@
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+//MEDIA QUERY MANAGER
+/*
+0-576px :       sm
+576-768px :     md
+768-992px :     lg
+992-1200 :      xl
+[1200-+] :   Podstawowe style
+
+
+$breakepoint opcje:
+-sm
+-md
+-gl
+-xl
+
+1em = 16px : najlepsze do media-query są em'y , 16px to podstawowa wartość czcionki przeglądarki
+*/
+@mixin respond($breakepoint) {
+    @if $breakepoint == sm {
+        @media (max-width: 36em) { @content }; //576px
+    }
+    @if $breakepoint == md {
+        @media (max-width: 48em) { @content }; //768px
+    }
+    @if $breakepoint == lg {
+        @media (max-width: 62em) { @content }; //992px
+    }
+    @if $breakepoint == xl {
+        @media (min-width: 75em) { @content }; //1200px
+    }
+}

@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+} 
+
+html {
+    font-size: 62.5%; // 1rem = 10px 10/16 = 62.5
+}
+
+body {
+    box-sizing: border-box;
+}
+
+strong {
+  font-weight: 900;
+}
+
+figure{
+  margin: auto;
+}
+.content{
+  position: relative;
+  background: white;
+  margin-bottom: 400px;
+  overflow: hidden;
+  z-index: 10;
+}
+  article{
+    padding: 100px 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+img{
+  max-width: 100%;
+}

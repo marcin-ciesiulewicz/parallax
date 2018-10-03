@@ -1,0 +1,62 @@
+.large-window {
+    height: 64rem;
+    width: 64rem;
+    background: url(../img/model2.jpg) repeat-y;
+    background-position: center 0px;
+    background-attachment: fixed;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.window-tint {
+    color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color-black, .5);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promo-text {
+    font-size: 1.6rem;
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 1.2;
+
+    strong {
+        display: block;
+        font-size: 3rem;
+
+        span {
+            font-weight: 300;
+            font-size: 2rem;
+            font-style: italic;
+            color: rgba($color-white, 0.6);
+        }
+    }
+
+    .window-cta {
+        &:link,
+        &:visited {
+            color: $color-white;
+            font-size: 2rem;
+            text-decoration: none;
+            border: 1px solid $color-white;
+            padding: 1rem 2rem;
+            transition: all .3s ease-in;
+            font-weight: 400;
+        }
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-black;
+        }
+    }
+}
